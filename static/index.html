@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet Docker - Taller DevOps con CI/CD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-bottom: 0.5em;
+            color: #007bff;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 1em;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+            text-wrap: pretty;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        footer .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hola #nombre</h1>
+    <p>Esta colección de comandos son los vistos en el taller. Hay muchos más, pero esto te ayudará a iniciar en el
+        mundo de Docker</p>
+
+    <h2>Cheatsheet Docker</h2>
+
+    <h3>Docker Run</h3>
+    <pre><code>docker run [opciones] nombre-imagen</code></pre>
+    <p>Este comando se utiliza para crear e iniciar un contenedor a partir de una imagen.</p>
+
+    <h3>Docker Pull</h3>
+    <pre><code>docker pull nombre-imagen</code></pre>
+    <p>Descarga una imagen de Docker Hub u otro repositorio de imágenes de contenedores.</p>
+
+    <h3>Docker PS</h3>
+    <pre><code>docker ps</code></pre>
+    <p>Muestra una lista de contenedores en ejecución.</p>
+
+    <h3>Docker PS -a</h3>
+    <pre><code>docker ps -a</code></pre>
+    <p>Muestra una lista de todos los contenedores, incluidos los que están detenidos.</p>
+
+    <h3>Docker Images</h3>
+    <pre><code>docker images | head</code></pre>
+    <p>Muestra las imágenes disponibles en el sistema.</p>
+
+    <h3>Docker Start</h3>
+    <pre><code>docker start ID-contenedor</code></pre>
+    <p>Inicia un contenedor detenido.</p>
+
+    <h3>Docker Logs</h3>
+    <pre><code>docker logs ID-contenedor o nombre-contenedor</code></pre>
+    <p>Muestra los registros de salida de un contenedor.</p>
+
+    <h3>Docker Logs -f</h3>
+    <pre><code>docker logs -f ID-contenedor</code></pre>
+    <p>Muestra los registros de salida de un contenedor en tiempo real.</p>
+
+    <h3>Docker Exec</h3>
+    <pre><code>docker exec ID-contenedor comando</code></pre>
+    <p>Ejecuta un comando en un contenedor en ejecución.</p>
+
+    <h3>Docker Stop</h3>
+    <pre><code>docker stop ID-contenedor</code></pre>
+    <p>Detiene un contenedor en ejecución.</p>
+
+    <h3>Docker Build</h3>
+    <pre><code>docker build -t nombre-imagen .</code></pre>
+    <p>Construye una imagen de Docker a partir de un Dockerfile en el directorio actual.</p>
+
+    <h3>Docker Login</h3>
+    <pre><code>docker login</code></pre>
+    <p>Inicia sesión en Docker Hub.</p>
+
+    <h3>Docker Tag</h3>
+    <pre><code>docker tag ID-imagen nuevo-nombre</code></pre>
+    <p>Etiqueta una imagen de Docker con un nuevo nombre o versión.</p>
+
+    <h3>Docker Push</h3>
+    <pre><code>docker push nuevo-nombre</code></pre>
+    <p>Sube una imagen de Docker a Docker Hub u otro repositorio.</p>
+
+    <h3>Docker RM</h3>
+    <pre><code>docker rm ID-contenedor</code></pre>
+    <p>Elimina uno o más contenedores.</p>
+
+    <h3>Docker Image RM</h3>
+    <pre><code>docker image rm ID-imagen</code></pre>
+    <p>Elimina una o más imágenes.</p>
+
+    <footer>
+        <p style="font-size: small;">Si necesitas más información o apoyo, contáctame por aquí.</p>
+        <div class="social">
+            <a href="https://codecraftavila.super.site/" target="_blank"><svg role="img" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <title>htmx</title>
+                    <path
+                        d="M0 13.01v-2l7.09-2.98.58 1.94-5.1 2.05 5.16 2.05-.63 1.9Zm16.37 1.03 5.18-2-5.16-2.09.65-1.88L24 10.95v2.12L17 16zm-2.85-9.98H16l-5.47 15.88H8.05Z" />
+                </svg></a>
+            <a href="https://twitter.com/codecraftavila" target="_blank"><svg role="img" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                    <title>Twitter</title>
+                    <path
+                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                </svg></a>
+            <a href="https://www.linkedin.com/in/eric-avila-132b00b3/" target="_blank"><svg
+                    xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="32"
+                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                    <path d="M8 11l0 5" />
+                    <path d="M8 8l0 .01" />
+                    <path d="M12 16l0 -5" />
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                </svg></a>
+            <a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf" target="_blank"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    class="icon icon-tabler icon-tabler-file-type-pdf" width="44" height="44" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                    <path d="M17 18h2" />
+                    <path d="M20 15h-3v6" />
+                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                </svg></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

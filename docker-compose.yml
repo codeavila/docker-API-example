@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  docker-api:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017
+  mongo:
+   image: mongo:latest
+  #  ports:
+  #   - "27017:27017"
