@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // Usar el router para las rutas relacionadas con strings
 // http://localhost:3001/strings/recuperar
-// http://localhost:3001/strings/insertar?contenido=HolaDBAtlas
+// http://localhost:3001/strings/insertar?contenido=HolaMundo
 app.use('/strings', stringsRouter);
 
 // Usar el router para las rutas relacionadas con strings
