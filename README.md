@@ -100,3 +100,34 @@ Ejecutamos el `Docker Compose`:
 ```bash
 docker compose up
 ```
+
+## Ejecutar Tests
+Para ejecutar las pruebas automatizadas de la API, utiliza el siguiente comando que también generará un informe de cobertura:
+
+```bash
+npm test
+```
+
+## Mostrar tu nombre en el Index
+```url
+http://localhost:3001/?nombre=Eric%20Avila
+```
+
+## Realizar Operaciones con la API
+INSERTAR un nuevo string
+
+Para insertar un nuevo string en la base de datos, realiza una solicitud GET a la siguiente URL:
+
+```url
+http://localhost:3001/strings/insertar?contenido=HolaMundo
+```
+
+Esta operación debería retornar un estado 201 si el string se inserta correctamente.
+
+## RECUPERAR los strings insertados
+Para recuperar todos los strings almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
+
+```url
+http://localhost:3001/strings/recuperar
+```
+Esta operación debería devolver una lista de todos los strings almacenados junto con un estado 200.

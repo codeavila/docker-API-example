@@ -1,6 +1,27 @@
 {
+  "name": "docker-api-example",
+  "version": "1.0.0",
+  "description": "API para mostrar Comandos basicos Docker e insert/get datos en una BD MongoDB",
+  "author": "Eric Avila <codecraftavila>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeavila/docker-API-example.git"
+  },  
   "dependencies": {
     "express": "4.19.2",
     "mongoose": "8.3.0"
+  },
+  "devDependencies": {
+    "jest": "29.7.0",
+    "supertest": "7.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "test": "jest --coverage"
   }
 }
