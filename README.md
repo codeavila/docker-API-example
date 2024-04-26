@@ -1,5 +1,21 @@
 # Actividad: Conectar API Express con MongoDB usando Docker
 
+# Actividad: Conectar API Express con MongoDB usando Docker
+
+## Tabla de Contenido
+- [Actividad 1](#actividad-1)
+  - [Ejecutar Dockerfile y levantar MongoDB](#1-ejecutar-dockerfile-y-levantar-mongodb)
+  - [Dockerfile Explicado](#dockerfile-explicado)
+  - [Comprobación del servicio](#2-comprobación-del-servicio)
+  - [Logs de contenedores](#3-logs-de-contenedores)
+
+- [Actividad 2](#actividad-2)
+  - [Introducción a Docker Compose y redes en Docker](#1-introducción-a-docker-compose-y-redes-en-docker)
+  - [Funcionamiento de los End Points](#2-funcionamiento-de-los-end-points)
+
+- [Extras](#extras)
+  - [Ejecutar Tests](#ejecutar-tests)
+
 Esta actividad consiste en configurar un entorno de desarrollo en Docker donde una API de Express se conecta a una base de datos MongoDB. Utilizamos un `Dockerfile` para configurar la API y `docker-compose.yml` para manejar ambos servicios: la API y la base de datos.
 
 # Actividad 1
