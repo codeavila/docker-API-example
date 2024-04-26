@@ -2,6 +2,14 @@
 
 Esta actividad consiste en configurar un entorno de desarrollo en Docker donde una API de Express se conecta a una base de datos MongoDB. Utilizamos un `Dockerfile` para configurar la API y `docker-compose.yml` para manejar ambos servicios: la API y la base de datos.
 
+# Actividad 1
+
+```
+Nota: Esta actividad demuestra que, al levantar el contenedor de MongoDB y el Dockerfile de la API de manera independiente, no lograrán conectarse automáticamente debido a que no están configurados en la misma red de Docker. Este escenario subraya la importancia de una configuración adecuada de redes en Docker para permitir la comunicación entre contenedores. 
+
+Siguiente paso: Para configurar correctamente la red y permitir la comunicación entre la API y MongoDB, continúa con la Actividad 2.
+```
+
 ## 1. Ejecutar Dockerfile y levantar MongoDB
 
 Primero, iniciamos un contenedor de MongoDB:
@@ -65,8 +73,17 @@ docker logs -f api-node
 Observamos que, aunque haya un contenedor de MongoDB, el contenedor de la API no puede "verlo".
 
 
+# Actividad 2
 
-## 4. Introducción a Docker Compose y redes en Docker
+```
+Nota:
+Esta actividad se centra en demostrar el uso y la funcionalidad de docker-compose. Se explicarán las diferentes partes del archivo docker-compose.yml y su impacto en la configuración del entorno.
+
+Objetivo:
+Al ejecutar docker-compose up, se levantarán automáticamente tanto la API como la base de datos MongoDB, configuradas para comunicarse entre sí, proporcionando así una API totalmente funcional y conectada.
+```
+
+## 1. Introducción a Docker Compose y redes en Docker
 
 Dado que el contenedor de la API no puede conectar con el de MongoDB, necesitamos configurar una red común. Docker-compose.yml permite gestionar la red y otros aspectos de los contenedores, facilitando la comunicación entre ellos:
 
@@ -101,12 +118,7 @@ Ejecutamos el `Docker Compose`:
 docker compose up
 ```
 
-## Ejecutar Tests
-Para ejecutar las pruebas automatizadas de la API, utiliza el siguiente comando que también generará un informe de cobertura:
-
-```bash
-npm test
-```
+# 2. Funcionamiento de los End Points
 
 ## Mostrar tu nombre en el Index
 ```url
@@ -131,3 +143,13 @@ Para recuperar todos los strings almacenados en la base de datos, realiza una so
 http://localhost:3001/strings/recuperar
 ```
 Esta operación debería devolver una lista de todos los strings almacenados junto con un estado 200.
+
+# Extras
+
+## Ejecutar Tests
+Para ejecutar las pruebas automatizadas de la API, utiliza el siguiente comando que también generará un informe de cobertura:
+
+```bash
+npm test
+```
+
