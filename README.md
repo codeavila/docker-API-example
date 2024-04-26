@@ -1,7 +1,5 @@
 # Actividad: Conectar API Express con MongoDB usando Docker
 
-# Actividad: Conectar API Express con MongoDB usando Docker
-
 ## Tabla de Contenido
 - [Actividad 1](#actividad-1)
   - [Ejecutar Dockerfile y levantar MongoDB](#1-ejecutar-dockerfile-y-levantar-mongodb)
